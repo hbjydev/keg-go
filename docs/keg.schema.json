@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://keg.pub/2023-01/keg.yaml",
+  "title": "KEG Info",
+  "description": "A manifest file defining information about a KEG.",
+  "type": "object",
+
+  "required": [
+    "title",
+    "updated"
+  ],
+
+  "properties": {
+    "title": {
+      "description": "The title of this KEG",
+      "type": "string",
+      "example": "Knowledge Exchange Graph (KEG) Specification 2023-01"
+    },
+    "kegv": {
+      "description": "Which version of the specification this KEG conforms to",
+      "type": "string",
+      "example": "2023-01"
+    },
+    "creator": {
+      "description": "The author of this KEG",
+      "type": "string",
+      "example": "git@github.com:rwxrob/rwxrob.git"
+    },
+    "state": {
+      "description": "The state of this KEG",
+      "type": "string",
+      "example": "draft"
+    },
+    "updated": {
+      "description": "The last time the KEG was updated",
+      "type": "string",
+      "example": "2022-12-02 05:14:35Z"
+    },
+    
+    "summary": {
+      "description": "A description of the contents of this KEG",
+      "type": "string",
+      "example": "An alternative to a broken Web for knowledge content creation, management, publishing, attribution, and secure exchange."
+    },
+
+    "urls": {
+      "description": "URLs that this KEG is available at",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "example": "git@github.com:rwxrob/keg-spec.git"
+      }
+    },
+
+    "indexes": {
+      "description": "The location of indexes (dexes) mapping this KEG's content",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file"],
+        "properties": {
+          "file": {
+            "description": "The location of the index (dex) file",
+            "type": "string",
+            "example": "dex/nodes.tsv"
+          },
+          "summary": {
+            "description": "A description of what this index is",
+            "type": "string",
+            "example": "by id"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../docs/keg.schema.json
+updated: 2022-12-02 05:14:35Z
+kegv:    2023-01
+title:   Knowledge Exchange Graph (KEG) Specification 2023-01
+creator: git@github.com:rwxrob/rwxrob.git
+state:   draft
+
+summary:
+  An alternative to a broken Web for knowledge content creation,
+  management, publishing, attribution, and secure exchange.
+
+urls:
+  - git@github.com:rwxrob/keg-spec.git
+
+indexes:
+  - file: dex/changes.md
+    summary: by time last updated
+  - file: dex/nodes.tsv
+    summary: by id
